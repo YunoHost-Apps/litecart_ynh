@@ -1,0 +1,72 @@
+#!/bin/bash
+### App file generated with YoloGen, the Yunohost app generator, version 0.8.3.
+
+#=================================================
+# GENERIC START
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+source _common.sh
+source /usr/share/yunohost/helpers
+
+#=================================================
+# INSTALL DEPENDENCIES
+#=================================================
+
+#=================================================
+# APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+#=================================================
+ynh_script_progression --message="Setting up source files..."
+
+ynh_setup_source --dest_dir="$install_dir"
+
+chown -R $app:www-data "$install_dir"
+
+#=================================================
+# SYSTEM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding system configurations related to $app..."
+
+# Create a dedicated NGINX config using the conf/nginx.conf template
+ynh_add_nginx_config
+
+# Use logrotate to manage application logfile(s)
+ynh_use_logrotate
+
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+# ADD A CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding app's configuration file..."
+
+ynh_add_config --template="" --destination="$install_dir/"
+
+# FIXME: this should be handled by the core in the future
+# You may need to use chmod 600 instead of 400,
+# for example if the app is expected to be able to modify its own config
+chmod 400 "$install_dir/"
+chown $app:$app "$install_dir/"
+
+#=================================================
+# INSTALL APP
+#=================================================
+ynh_script_progression --message="Installing app..." --weight=5
+
+pushd $install_dir
+some_command --build
+popd
+
+#=================================================
+# FINALIZE APP INSTALL WITH CURL
+#=================================================
+
+# REMOVEME? ynh_script_progression --message="Finalizing installation..."
+# REMOVEME? ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+ynh_script_progression --message="Installation of $app completed" --last

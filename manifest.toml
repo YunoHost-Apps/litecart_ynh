@@ -1,0 +1,70 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "convos"
+name = "Convos"
+
+description.en = "Multiuser IRC Web client"
+description.fr = "Client IRC Web multi-utilisateurs"
+
+version = "8.05~ynh1"
+
+maintainers = ["OniriCorpe"]
+
+[upstream]
+license = "Artistic-1.0"
+website = "http://convos.chat/"
+demo = "https://convos.chat/#instant-demo"
+admindoc = "https://convos.chat/doc/"
+
+code = "https://github.com/convos-chat/convos"
+
+[integration]
+yunohost = '>= 11.2'
+architectures = "all" # TODO : handle the "all" option (no ["all"])
+multi_instance = true
+ldap = "false" # TODO : fixme, use actual booleans + handle the "not_relevant" value
+sso = "true"
+# FIXME: replace with an **estimate** minimum disk and RAM requirements. e.g. 20M, 400M, 1G... You may have have a look at CI results
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/convos"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+
+    [resources.sources]
+
+        [resources.sources.main]
+        # This will pre-fetch the asset which can then be deployed during the install/upgrade scripts with :
+        #    ynh_setup_source --dest_dir="$install_dir"
+        # You can also define other assets than "main" and add --source_id="foobar" in the previous command
+        url = "https://github.com/convos-chat/convos/archive/refs/tags/v8.05.tar.gz"
+        sha256 = "ff6fcb3ef7e741e485477f73c15fd75316f5d1b6110f8c861d7074ba83cf06bf"
+
+        # These infos are used by https://github.com/YunoHost/apps/blob/master/tools/autoupdate_app_sources/autoupdate_app_sources.py
+        # to auto-update the previous asset urls and sha256sum + manifest version
+        # assuming the upstream's code repo is on github and relies on tags or releases
+        # See the 'sources' resource documentation for more details
+
+        autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
