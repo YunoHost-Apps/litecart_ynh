@@ -25,10 +25,10 @@ ynh_script_progression --message="Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-ynh_exec_warn_less "$install_dir/script/convos" install
+ynh_exec_warn_less /var/www/"$app"/script/convos install
 
 # enable EV module
-ynh_exec_warn_less "$install_dir/script/convos" cpanm EV
+ynh_exec_warn_less /var/www/"$app"/script/convos cpanm EV
 
 chown -R "$app:www-data" "$install_dir"
 

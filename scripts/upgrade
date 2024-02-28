@@ -36,12 +36,12 @@ then
 	ynh_script_progression --message="Upgrading source files..."
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir" --full_replace=1
+	ynh_setup_source --dest_dir="$install_dir" --full_replace=1 --keep="content"
 
-	ynh_exec_warn_less "$install_dir/script/convos" install
+	ynh_exec_warn_less /var/www/"$app"/script/convos install
 
 	# enable EV module
-	ynh_exec_warn_less "$install_dir/script/convos" cpanm EV
+	ynh_exec_warn_less /var/www/"$app"/script/convos cpanm EV
 fi
 
 chown -R "$app:www-data" "$install_dir"
