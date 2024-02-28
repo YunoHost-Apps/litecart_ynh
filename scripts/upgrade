@@ -39,6 +39,9 @@ then
 	ynh_setup_source --dest_dir="$install_dir" --full_replace=1
 
 	ynh_exec_warn_less "$install_dir/script/convos" install
+
+	# enable EV module
+	ynh_exec_warn_less "$install_dir/script/convos" cpanm EV
 fi
 
 chown -R "$app:www-data" "$install_dir"
