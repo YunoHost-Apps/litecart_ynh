@@ -11,7 +11,7 @@ User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
 Environment"CONVOS_LOCAL_SECRET=__CONVOS_LOCAL_SECRET__"
-Environment="CONVOS_REQUEST_BASE=__DOMAIN____PATH__"
+Environment="CONVOS_REQUEST_BASE=https://__DOMAIN____PATH__"
 Environment="CONVOS_HOME=__DATA_DIR__"
 ExecStart=__INSTALL_DIR__/script/convos daemon --listen http://127.0.0.1:__PORT__
 StandardOutput=append:/var/log/__APP__/__APP__.log
