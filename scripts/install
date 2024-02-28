@@ -10,8 +10,11 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# INSTALL DEPENDENCIES
+# GENERATE A SECRET KEY
 #=================================================
+
+convos_local_secret=$(ynh_string_random --length=30)
+ynh_app_setting_set --app=app --key=convos_local_secret --value="$convos_local_secret"
 
 #=================================================
 # APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
@@ -22,7 +25,7 @@ ynh_script_progression --message="Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-chown -R $app:www-data "$install_dir"
+chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -48,23 +51,7 @@ ynh_add_config --template="" --destination="$install_dir/"
 # You may need to use chmod 600 instead of 400,
 # for example if the app is expected to be able to modify its own config
 chmod 400 "$install_dir/"
-chown $app:$app "$install_dir/"
-
-#=================================================
-# INSTALL APP
-#=================================================
-ynh_script_progression --message="Installing app..." --weight=5
-
-pushd $install_dir
-some_command --build
-popd
-
-#=================================================
-# FINALIZE APP INSTALL WITH CURL
-#=================================================
-
-# REMOVEME? ynh_script_progression --message="Finalizing installation..."
-# REMOVEME? ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
+chown "$app:$app" "$install_dir/"
 
 #=================================================
 # END OF SCRIPT
