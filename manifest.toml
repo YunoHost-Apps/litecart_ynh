@@ -17,7 +17,6 @@ license = "Artistic-1.0"
 website = "http://convos.chat/"
 demo = "https://convos.chat/#instant-demo"
 admindoc = "https://convos.chat/doc/"
-
 code = "https://github.com/convos-chat/convos"
 
 [integration]
