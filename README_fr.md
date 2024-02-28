@@ -16,11 +16,19 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-Client IRC Web multi-utilisateurs
+Convos est un client IRC qui fonctionne dans votre navigateur et qui fait entrer l'expérience IRC dans le 21ème siècle.  
+Il dispose d'un bouncer persistant côté serveur qui vous permet de rester en ligne même lorsque vous fermez la fenêtre de votre navigateur.  
+Vous voulez utiliser Convos sur votre téléphone ? Pas de problème ! Convos est entièrement responsive et s'adapte à tous les écrans.
+
 
 **Version incluse :** 8.05~ynh1
 
 **Démo :** https://convos.chat/#instant-demo
+
+## Captures d’écran
+
+![Capture d’écran de Convos](./doc/screenshots/2020-05-28-convos-chat.jpg)
+
 ## Documentations et ressources
 
 * Site officiel de l’app : <http://convos.chat/>
