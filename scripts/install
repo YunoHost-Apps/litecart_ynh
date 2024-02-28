@@ -25,6 +25,8 @@ ynh_script_progression --message="Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
+"$install_dir/script/convos" install
+
 chown -R "$app:www-data" "$install_dir"
 
 #=================================================

@@ -13,6 +13,7 @@ WorkingDirectory=__INSTALL_DIR__/
 Environment"CONVOS_LOCAL_SECRET=__CONVOS_LOCAL_SECRET__"
 Environment="CONVOS_HOME=__INSTALL_DIR__"
 Environment="CONVOS_REVERSE_PROXY=1"
+Environment="CONVOS_HOME=__DATA_DIR__"
 ExecStart=__INSTALL_DIR__/script/convos daemon --listen http://127.0.0.1:__PORT__
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
