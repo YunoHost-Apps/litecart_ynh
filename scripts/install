@@ -30,6 +30,8 @@ ynh_exec_warn_less /var/www/"$app"/script/convos install
 # enable EV module
 ynh_exec_warn_less /var/www/"$app"/script/convos cpanm EV
 
+mkdir -p "$install_dir/data"
+
 chown -R "$app:www-data" "$install_dir"
 
 #=================================================
