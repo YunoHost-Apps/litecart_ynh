@@ -44,12 +44,6 @@ yunohost service add "$app" --description="Convos server" --log="/var/log/$app/$
 ynh_restore_file --origin_path="/etc/logrotate.d/$app"
 
 #=================================================
-# RESTORE VARIOUS FILES
-#=================================================
-
-ynh_restore_file --origin_path="/var/log/$app/"
-
-#=================================================
 # RELOAD NGINX AND THE APP SERVICE
 #=================================================
 ynh_script_progression --message="Reloading NGINX web server and $app's service..." --weight=1
