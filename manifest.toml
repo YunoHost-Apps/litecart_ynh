@@ -8,7 +8,7 @@ name = "Convos"
 description.en = "Multiuser IRC Web client"
 description.fr = "Client IRC Web multi-utilisateurs"
 
-version = "8.05~ynh1"
+version = "8.07~ynh1"
 
 maintainers = [ "OniriCorpe" ]
 
@@ -47,8 +47,8 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://github.com/convos-chat/convos/archive/refs/tags/v8.05.tar.gz"
-        sha256 = "ff6fcb3ef7e741e485477f73c15fd75316f5d1b6110f8c861d7074ba83cf06bf"
+        url = "https://github.com/convos-chat/convos/archive/refs/tags/v8.07.tar.gz"
+        sha256 = "42adf7c6de6adff63361888e2fdde8db8552672ae6a5088ab18aaf9e5037e55a"
         autoupdate.strategy = "latest_github_tag"
 
 [resources.system_user]
