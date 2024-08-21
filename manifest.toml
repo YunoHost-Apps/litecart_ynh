@@ -13,7 +13,7 @@ version = "8.07~ynh1"
 maintainers = [ "OniriCorpe" ]
 
 [upstream]
-license = "Artistic-1.0"
+license = "Artistic-2.0"
 website = "http://convos.chat/"
 demo = "https://convos.chat/#instant-demo"
 admindoc = "https://convos.chat/doc/"
