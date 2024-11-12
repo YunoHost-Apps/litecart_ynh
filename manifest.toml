@@ -2,26 +2,24 @@
 
 packaging_format = 2
 
-id = "convos"
-name = "Convos"
+id = "litecart"
+name = "Litecart"
 
-description.en = "Multiuser IRC Web client"
-description.fr = "Client IRC Web multi-utilisateurs"
+description.en = "Super simple online store"
+description.fr = "Boutique en ligne super simple"
 
-version = "8.07~ynh1"
+version = "0.1.12~ynh1"
 
 maintainers = [ "OniriCorpe" ]
 
 [upstream]
-license = "Artistic-2.0"
-website = "http://convos.chat/"
-demo = "https://convos.chat/#instant-demo"
-admindoc = "https://convos.chat/doc/"
-code = "https://github.com/convos-chat/convos"
+license = "MIT"
+admindoc = "https://github.com/shurco/litecart?tab=readme-ov-file#adding-payment-systems"
+code = "https://github.com/shurco/litecart"
 
 [integration]
 yunohost = '>= 11.2'
-architectures = "all"
+architectures = [ "amd64", "arm64" ]
 multi_instance = true
 ldap = false
 sso = true
@@ -42,10 +40,16 @@ ram.runtime = "50M"
 
     [resources.sources]
 
-        [resources.sources.main]
-        url = "https://github.com/convos-chat/convos/archive/refs/tags/v8.07.tar.gz"
-        sha256 = "42adf7c6de6adff63361888e2fdde8db8552672ae6a5088ab18aaf9e5037e55a"
-        autoupdate.strategy = "latest_github_tag"
+        [resources.sources.main]       
+
+        i386.url = "https://github.com/shurco/litecart/releases/download/v0.1.12/litecart_0.1.12_linux-amd64.tar.gz"
+        i386.sha256 = "0c32707c2c3459c207c2aeaae270415daf03d80ebc64fa0f1a4c67687723dfa2"
+        arm64.url = "https://github.com/shurco/litecart/releases/download/v0.1.12/litecart_0.1.12_linux-arm64.tar.gz"
+        arm64.sha256 = "a9efe60870d18a18e061a4b3f6eb2870fd401a901b92defb1db10f132b35c315"
+
+        autoupdate.asset.amd64 = "litecart_.*linux-amd64.tar.gz$"
+        autoupdate.asset.arm64 = "litecart_.*linux-arm64.tar.gz$"
+        autoupdate.strategy = "latest_github_release"
 
 [resources.system_user]
 
@@ -55,6 +59,3 @@ ram.runtime = "50M"
 main.url = "/"
 
 [resources.ports]
-
-[resources.apt]
-packages = [ "gcc, libio-socket-ssl-perl, make, openssl, perl" ]
