@@ -19,6 +19,7 @@ code = "https://github.com/shurco/litecart"
 
 [integration]
 yunohost = '>= 11.2'
+helpers_version = "2.1"
 architectures = [ "amd64", "arm64" ]
 multi_instance = true
 ldap = false

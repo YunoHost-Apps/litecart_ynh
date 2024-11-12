@@ -1,58 +1,42 @@
 #!/bin/bash
 ### App file generated with YoloGen, the Yunohost app generator, version 0.8.3.
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
 source _common.sh
 source /usr/share/yunohost/helpers
-
-#=================================================
-# GENERATE A SECRET KEY
-#=================================================
-
-convos_local_secret=$(ynh_string_random --length=30)
-ynh_app_setting_set --app="$app" --key=convos_local_secret --value="$convos_local_secret"
 
 #=================================================
 # APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Setting up source files..."
+ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-ynh_exec_warn_less /var/www/"$app"/litecart init
-
-chown -R "$app:www-data" "$install_dir"
+ynh_hide_warnings "$install_dir/litecart" init
 
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding system configurations related to $app..."
+ynh_script_progression "Adding system configurations related to $app..."
 
-# Create a dedicated NGINX config using the conf/nginx.conf template
-ynh_add_nginx_config
+ynh_config_add_nginx
 
-ynh_add_systemd_config
+ynh_config_add_systemd
 
 yunohost service add "$app" --description="Litecart server" --log="/var/log/$app/$app.log"
 
-# Use logrotate to manage application logfile(s)
-ynh_use_logrotate
+ynh_config_add_logrotate
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Starting $app's systemd service..." --weight=1
+ynh_script_progression "Starting $app's systemd service..."
 
 # Start a systemd service
-ynh_systemd_action --service_name="$app" --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemctl --service="$app" --action="start"
 
 #=================================================
 # END OF SCRIPT
 #=================================================
-ynh_script_progression --message="Installation of $app completed" --last
+ynh_script_progression "Installation of $app completed"
