@@ -29,6 +29,10 @@ Want to use Convos on your phone? No problem! Convos is fully responsive and fit
 
 ![Tangkapan Layar pada Convos](./doc/screenshots/2020-05-28-convos-chat.jpg)
 
+## :red_circle: Antifitur
+
+- **Not totally free package**: The YunoHost package of this app is under an overall free license, but with clauses that may restrict its use.
+
 ## Dokumentasi dan sumber daya
 
 - Website aplikasi resmi: <http://convos.chat/>

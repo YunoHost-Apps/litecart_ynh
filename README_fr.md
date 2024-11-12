@@ -29,6 +29,10 @@ Vous voulez utiliser Convos sur votre téléphone ? Pas de problème ! Convos es
 
 ![Capture d’écran de Convos](./doc/screenshots/2020-05-28-convos-chat.jpg)
 
+## :red_circle: Anti-fonctionnalités
+
+- **Package sous licence libre restreinte **: Le package YunoHost de cette application est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation.
+
 ## Documentations et ressources
 
 - Site officiel de l’app : <http://convos.chat/>
