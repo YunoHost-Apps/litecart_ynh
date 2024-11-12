@@ -1,72 +1,45 @@
 #!/bin/bash
 ### App file generated with YoloGen, the Yunohost app generator, version 0.8.3.
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
 source _common.sh
 source /usr/share/yunohost/helpers
-
-#=================================================
-# INSTALL DEPENDENCIES
-#=================================================
 
 #=================================================
 # APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Setting up source files..."
+ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-chown -R $app:www-data "$install_dir"
+chown -R "$app:$app" "$install_dir"
+chmod +x "$install_dir/litecart"
+
+ynh_exec_as_app "$install_dir/litecart" init
 
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding system configurations related to $app..."
+ynh_script_progression "Adding system configurations related to $app..."
 
-# Create a dedicated NGINX config using the conf/nginx.conf template
-ynh_add_nginx_config
+ynh_config_add_nginx
 
-# Use logrotate to manage application logfile(s)
-ynh_use_logrotate
+ynh_config_add_systemd
 
-#=================================================
-# APP INITIAL CONFIGURATION
-#=================================================
-# ADD A CONFIGURATION
-#=================================================
-ynh_script_progression --message="Adding app's configuration file..."
+yunohost service add "$app" --description="Litecart server" --log="/var/log/$app/$app.log"
 
-ynh_add_config --template="" --destination="$install_dir/"
-
-# FIXME: this should be handled by the core in the future
-# You may need to use chmod 600 instead of 400,
-# for example if the app is expected to be able to modify its own config
-chmod 400 "$install_dir/"
-chown $app:$app "$install_dir/"
+ynh_config_add_logrotate
 
 #=================================================
-# INSTALL APP
+# START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Installing app..." --weight=5
+ynh_script_progression "Starting $app's systemd service..."
 
-pushd $install_dir
-some_command --build
-popd
-
-#=================================================
-# FINALIZE APP INSTALL WITH CURL
-#=================================================
-
-# REMOVEME? ynh_script_progression --message="Finalizing installation..."
-# REMOVEME? ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
+# Start a systemd service
+ynh_systemctl --service="$app" --action="start"
 
 #=================================================
 # END OF SCRIPT
 #=================================================
-ynh_script_progression --message="Installation of $app completed" --last
+ynh_script_progression "Installation of $app completed"

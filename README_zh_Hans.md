@@ -3,46 +3,57 @@
 请勿手动编辑。
 -->
 
-# YunoHost 上的 Convos
+# YunoHost 上的 Litecart
 
-[![集成程度](https://dash.yunohost.org/integration/convos.svg)](https://ci-apps.yunohost.org/ci/apps/convos/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/convos.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/convos.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/litecart.svg)](https://ci-apps.yunohost.org/ci/apps/litecart/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/litecart.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/litecart.maintain.svg)
 
-[![使用 YunoHost 安装 Convos](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=convos)
+[![使用 YunoHost 安装 Litecart](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=litecart)
 
 *[阅读此 README 的其它语言版本。](./ALL_README.md)*
 
-> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 Convos。*  
+> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 Litecart。*  
 > *如果您还没有 YunoHost，请参阅[指南](https://yunohost.org/install)了解如何安装它。*
 
 ## 概况
 
+Litecart is an open source shopping-cart in 1 file of embedded database (SQLite), convenient dashboard UI and simple site.
+
+### 🏆 Features
+
+💰 Support for Popular Payment Systems: Accept payments seamlessly with support for popular payment systems, ensuring a smooth checkout experience for your customers.
+
+🔑 Sell Files and License Keys: Whether you're selling digital files or license keys, litecart has you covered, providing flexibility in the types of products you can offer.
+
+⚙️ Lightweight and Efficient: litecart utilizes SQLite as its embedded database. This results in a lightweight website that performs exceptionally well.
+
+☁️ Easily Customizable: Modify and customize your litecart website effortlessly to match your branding and unique requirements, making it truly your own.
+
+🧞‍♂️ Convenient Administration Panel: With a user-friendly dashboard UI, litecart offers a hassle-free administration panel, allowing you to manage your store, inventory, and orders with ease.
 
 
-**分发版本：** 8.05~ynh1
+**分发版本：** 0.1.12~ynh1
 
-**演示：** <https://convos.chat/#instant-demo>
-## :red_circle: 负面特征
+## 截图
 
-- **Not totally free package**: The YunoHost package of this app is under an overall free license, but with clauses that may restrict its use.
+![Litecart 的截图](./doc/screenshots/banner.png)
 
 ## 文档与资源
 
-- 官方应用网站： <http://convos.chat/>
-- 官方管理文档： <https://convos.chat/doc/>
-- 上游应用代码库： <https://github.com/convos-chat/convos>
-- YunoHost 商店： <https://apps.yunohost.org/app/convos>
-- 报告 bug： <https://github.com/YunoHost-Apps/convos_ynh/issues>
+- 官方管理文档： <https://github.com/shurco/litecart?tab=readme-ov-file#adding-payment-systems>
+- 上游应用代码库： <https://github.com/shurco/litecart>
+- YunoHost 商店： <https://apps.yunohost.org/app/litecart>
+- 报告 bug： <https://github.com/YunoHost-Apps/litecart_ynh/issues>
 
 ## 开发者信息
 
-请向 [`testing` 分支](https://github.com/YunoHost-Apps/convos_ynh/tree/testing) 发送拉取请求。
+请向 [`testing` 分支](https://github.com/YunoHost-Apps/litecart_ynh/tree/testing) 发送拉取请求。
 
 如要尝试 `testing` 分支，请这样操作：
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/convos_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/litecart_ynh/tree/testing --debug
 或
-sudo yunohost app upgrade convos -u https://github.com/YunoHost-Apps/convos_ynh/tree/testing --debug
+sudo yunohost app upgrade litecart -u https://github.com/YunoHost-Apps/litecart_ynh/tree/testing --debug
 ```
 
 **有关应用打包的更多信息：** <https://yunohost.org/packaging_apps>
