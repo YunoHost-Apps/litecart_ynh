@@ -47,6 +47,7 @@ ram.runtime = "50M"
         amd64.sha256 = "0c32707c2c3459c207c2aeaae270415daf03d80ebc64fa0f1a4c67687723dfa2"
         arm64.url = "https://github.com/shurco/litecart/releases/download/v0.1.12/litecart_0.1.12_linux-arm64.tar.gz"
         arm64.sha256 = "a9efe60870d18a18e061a4b3f6eb2870fd401a901b92defb1db10f132b35c315"
+        in_subdir = false
 
         autoupdate.asset.amd64 = "litecart_.*linux-amd64.tar.gz$"
         autoupdate.asset.arm64 = "litecart_.*linux-arm64.tar.gz$"
