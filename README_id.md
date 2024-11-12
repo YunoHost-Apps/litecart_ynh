@@ -3,15 +3,15 @@ N.B.: README ini dibuat secara otomatis oleh <https://github.com/YunoHost/apps/t
 Ini TIDAK boleh diedit dengan tangan.
 -->
 
-# Convos untuk YunoHost
+# Litecart untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/convos.svg)](https://ci-apps.yunohost.org/ci/apps/convos/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/convos.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/convos.maintain.svg)
+[![Tingkat integrasi](https://dash.yunohost.org/integration/litecart.svg)](https://ci-apps.yunohost.org/ci/apps/litecart/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/litecart.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/litecart.maintain.svg)
 
-[![Pasang Convos dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=convos)
+[![Pasang Litecart dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=litecart)
 
 *[Baca README ini dengan bahasa yang lain.](./ALL_README.md)*
 
-> *Paket ini memperbolehkan Anda untuk memasang Convos secara cepat dan mudah pada server YunoHost.*  
+> *Paket ini memperbolehkan Anda untuk memasang Litecart secara cepat dan mudah pada server YunoHost.*  
 > *Bila Anda tidak mempunyai YunoHost, silakan berkonsultasi dengan [panduan](https://yunohost.org/install) untuk mempelajari bagaimana untuk memasangnya.*
 
 ## Ringkasan
@@ -21,36 +21,29 @@ It features a persistent bouncer on the server side that will keep you online ev
 Want to use Convos on your phone? No problem! Convos is fully responsive and fits any screen.
 
 
-**Versi terkirim:** 8.07~ynh1
-
-**Demo:** <https://convos.chat/#instant-demo>
+**Versi terkirim:** 0.1.12~ynh1
 
 ## Tangkapan Layar
 
-![Tangkapan Layar pada Convos](./doc/screenshots/2020-05-28-convos-chat.jpg)
-
-## :red_circle: Antifitur
-
-- **Not totally free package**: The YunoHost package of this app is under an overall free license, but with clauses that may restrict its use.
+![Tangkapan Layar pada Litecart](./doc/screenshots/2020-05-28-convos-chat.jpg)
 
 ## Dokumentasi dan sumber daya
 
-- Website aplikasi resmi: <http://convos.chat/>
-- Dokumentasi admin resmi: <https://convos.chat/doc/>
-- Depot kode aplikasi hulu: <https://github.com/convos-chat/convos>
-- Gudang YunoHost: <https://apps.yunohost.org/app/convos>
-- Laporkan bug: <https://github.com/YunoHost-Apps/convos_ynh/issues>
+- Dokumentasi admin resmi: <https://github.com/shurco/litecart?tab=readme-ov-file#adding-payment-systems>
+- Depot kode aplikasi hulu: <https://github.com/shurco/litecart>
+- Gudang YunoHost: <https://apps.yunohost.org/app/litecart>
+- Laporkan bug: <https://github.com/YunoHost-Apps/litecart_ynh/issues>
 
 ## Info developer
 
-Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/convos_ynh/tree/testing).
+Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/litecart_ynh/tree/testing).
 
 Untuk mencoba branch `testing`, silakan dilanjutkan seperti:
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/convos_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/litecart_ynh/tree/testing --debug
 atau
-sudo yunohost app upgrade convos -u https://github.com/YunoHost-Apps/convos_ynh/tree/testing --debug
+sudo yunohost app upgrade litecart -u https://github.com/YunoHost-Apps/litecart_ynh/tree/testing --debug
 ```
 
 **Info lebih lanjut mengenai pemaketan aplikasi:** <https://yunohost.org/packaging_apps>

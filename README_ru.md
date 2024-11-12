@@ -3,15 +3,15 @@
 Он НЕ ДОЛЖЕН редактироваться вручную.
 -->
 
-# Convos для YunoHost
+# Litecart для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/convos.svg)](https://ci-apps.yunohost.org/ci/apps/convos/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/convos.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/convos.maintain.svg)
+[![Уровень интеграции](https://dash.yunohost.org/integration/litecart.svg)](https://ci-apps.yunohost.org/ci/apps/litecart/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/litecart.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/litecart.maintain.svg)
 
-[![Установите Convos с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=convos)
+[![Установите Litecart с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=litecart)
 
 *[Прочтите этот README на других языках.](./ALL_README.md)*
 
-> *Этот пакет позволяет Вам установить Convos быстро и просто на YunoHost-сервер.*  
+> *Этот пакет позволяет Вам установить Litecart быстро и просто на YunoHost-сервер.*  
 > *Если у Вас нет YunoHost, пожалуйста, посмотрите [инструкцию](https://yunohost.org/install), чтобы узнать, как установить его.*
 
 ## Обзор
@@ -21,36 +21,29 @@ It features a persistent bouncer on the server side that will keep you online ev
 Want to use Convos on your phone? No problem! Convos is fully responsive and fits any screen.
 
 
-**Поставляемая версия:** 8.07~ynh1
-
-**Демо-версия:** <https://convos.chat/#instant-demo>
+**Поставляемая версия:** 0.1.12~ynh1
 
 ## Снимки экрана
 
-![Снимок экрана Convos](./doc/screenshots/2020-05-28-convos-chat.jpg)
-
-## :red_circle: Анти-функции
-
-- **Not totally free package**: The YunoHost package of this app is under an overall free license, but with clauses that may restrict its use.
+![Снимок экрана Litecart](./doc/screenshots/2020-05-28-convos-chat.jpg)
 
 ## Документация и ресурсы
 
-- Официальный веб-сайт приложения: <http://convos.chat/>
-- Официальная документация администратора: <https://convos.chat/doc/>
-- Репозиторий кода главной ветки приложения: <https://github.com/convos-chat/convos>
-- Магазин YunoHost: <https://apps.yunohost.org/app/convos>
-- Сообщите об ошибке: <https://github.com/YunoHost-Apps/convos_ynh/issues>
+- Официальная документация администратора: <https://github.com/shurco/litecart?tab=readme-ov-file#adding-payment-systems>
+- Репозиторий кода главной ветки приложения: <https://github.com/shurco/litecart>
+- Магазин YunoHost: <https://apps.yunohost.org/app/litecart>
+- Сообщите об ошибке: <https://github.com/YunoHost-Apps/litecart_ynh/issues>
 
 ## Информация для разработчиков
 
-Пришлите Ваш запрос на слияние в [ветку `testing`](https://github.com/YunoHost-Apps/convos_ynh/tree/testing).
+Пришлите Ваш запрос на слияние в [ветку `testing`](https://github.com/YunoHost-Apps/litecart_ynh/tree/testing).
 
 Чтобы попробовать ветку `testing`, пожалуйста, сделайте что-то вроде этого:
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/convos_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/litecart_ynh/tree/testing --debug
 или
-sudo yunohost app upgrade convos -u https://github.com/YunoHost-Apps/convos_ynh/tree/testing --debug
+sudo yunohost app upgrade litecart -u https://github.com/YunoHost-Apps/litecart_ynh/tree/testing --debug
 ```
 
 **Больше информации о пакетировании приложений:** <https://yunohost.org/packaging_apps>
