@@ -13,6 +13,7 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
+chown -R "$app:$app" "$install_dir"
 chmod +x "$install_dir/litecart"
 
 ynh_exec_as_app "$install_dir/litecart" init

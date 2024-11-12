@@ -25,6 +25,7 @@ ynh_script_progression "Upgrading source files..."
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="lc_base lc_digitals lc_uploads"
 
+chown -R "$app:$app" "$install_dir"
 chmod +x "$install_dir/litecart"
 
 ynh_exec_as_app "$install_dir/litecart" migrate
