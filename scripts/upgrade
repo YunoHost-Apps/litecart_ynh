@@ -38,10 +38,7 @@ then
 	# Download, check integrity, uncompress and patch the source from app.src
 	ynh_setup_source --dest_dir="$install_dir" --full_replace=1 --keep="data"
 
-	ynh_exec_warn_less /var/www/"$app"/script/convos install
-
-	# enable EV module
-	ynh_exec_warn_less /var/www/"$app"/script/convos cpanm EV
+	ynh_exec_warn_less /var/www/"$app"/litecart migrate
 fi
 
 chown -R "$app:www-data" "$install_dir"
@@ -55,7 +52,7 @@ ynh_add_nginx_config
 
 ynh_add_systemd_config
 
-yunohost service add "$app" --description="Convos server" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --description="Litecart server" --log="/var/log/$app/$app.log"
 
 ynh_use_logrotate --non-append
 
