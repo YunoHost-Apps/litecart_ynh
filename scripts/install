@@ -15,7 +15,7 @@ ynh_setup_source --dest_dir="$install_dir"
 
 chmod +x "$install_dir/litecart"
 
-ynh_hide_warnings "$install_dir/litecart" init
+ynh_exec_as_app "$install_dir/litecart" init
 
 #=================================================
 # SYSTEM CONFIGURATION

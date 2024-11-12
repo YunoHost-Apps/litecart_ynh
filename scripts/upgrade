@@ -27,7 +27,7 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="lc_base lc_dig
 
 chmod +x "$install_dir/litecart"
 
-ynh_hide_warnings "$install_dir/litecart" migrate
+ynh_exec_as_app "$install_dir/litecart" migrate
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
