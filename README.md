@@ -19,10 +19,6 @@ Explain in *a few (10~15) words* the purpose of the app or what it actually does
 <a href="https://github.com/YunoHost-Apps/litecart_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
 </div>
 
-
-## Screenshots
-![Screenshot of Litecart](./doc/screenshots/example.jpg)
-
 ## 📦 Developer info
 
 [![Automatic tests level](https://apps.yunohost.org/badge/cilevel/litecart)](https://ci-apps.yunohost.org/ci/apps/litecart/)
