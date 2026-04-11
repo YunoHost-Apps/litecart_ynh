@@ -46,11 +46,13 @@ ram.runtime = "50M"
     default = "visitors"
 
     [install.admin_username]
+    ask.en = "The name for your Litecart admin account."
+    ask.fr = "L'identifiant pour votre compte d'administration Litecart."
     type = "string"
 
     [install.admin_password]
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
+    ask.en = "The password for your Litecart admin account."
+    ask.fr = "Le mot de passe pour votre compte d'administration Litecart."
     type = "password"
 
 [resources]
@@ -64,8 +66,6 @@ ram.runtime = "50M"
     [resources.system_user]
 
     [resources.install_dir]
-
-    [resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
