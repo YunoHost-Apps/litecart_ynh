@@ -70,7 +70,7 @@ ram.runtime = "200M"
     main.url = "/"
 
     [resources.apt]
-    packages = "mariadb-server, php8.4-apcu php8.4-curl php8.4-dom php8.4-gd php8.4-imagick php8.4-mysql php8.4-simplexml php8.4-mbstring php8.4-intl php8.4-zip php8.4-xml"
+    packages = "mariadb-server, php8.3-apcu php8.3-curl php8.3-dom php8.3-gd php8.3-imagick php8.3-mysql php8.3-simplexml php8.3-mbstring php8.3-intl php8.3-zip php8.3-xml"
 
     [resources.database]
     type = "mysql"
