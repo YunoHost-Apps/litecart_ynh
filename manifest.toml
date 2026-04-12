@@ -58,8 +58,8 @@ ram.runtime = "200M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/litecart/litecart/archive/refs/tags/2.6.3.tar.gz"
-    sha256 = "d6bab78bc1364f307c42bf95b686407cc9a6fa07f1dbc5bd817f049bf448382d"
+    url = "https://github.com/Wachhund/litecart/archive/refs/heads/fix/cli-installer-paths.tar.gz"
+    sha256 = "75a4fd407f0e72ecdc64fe596bdd690d28447d737b4dc60edac58cf1f58d4ff4"
     autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
