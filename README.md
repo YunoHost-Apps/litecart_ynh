@@ -8,7 +8,7 @@ It shall NOT be edited by hand.
   Litecart, packaged for YunoHost
 </h1>
 
-Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)
+Lightweight and customizable e-commerce
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://www.litecart.net/)
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://www.litecart.net/demo)
